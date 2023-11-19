@@ -9,6 +9,12 @@
 
 <h4> Товари зі всіх регіонів України </h4>
 
+<form action="/" method="get">
+    Пошук по назві: <input type="text" name="title">
+    <br>
+    <input type="submit" value="Пошук">
+</form>
+
 <#list products as product>
     <div>
         <p> <b> ${product.title}
@@ -16,6 +22,8 @@
             | <a href = "/product/${product.id}"> Докладніше...</a>
         </p>
     </div>
+    <#else>
+    <h3>Товарів немає</h3>
 </#list>
 <hr>
 <h3>Створити новий товар</h3>
