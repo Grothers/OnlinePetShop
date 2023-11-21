@@ -14,16 +14,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductService {
     private final ProductRepository productRepository;
-    private List<Product> products = new ArrayList<>();
-    private long ID = 0;
-
-    {
-        products.add(new Product(++ID, "IPhone 14 pro", "test",
-                50000,"Maksym Mahera","Kyiv"));
-
-        products.add(new Product(++ID,"IPhone 15 pro", "test",
-                70000,"Grothers","Dunaivtsi"));
-    }
 
     public List<Product> listProducts(String title){
         if (title != null) return productRepository.findByTitle(title);
