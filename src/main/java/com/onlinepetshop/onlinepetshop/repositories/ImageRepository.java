@@ -1,8 +1,8 @@
 package com.onlinepetshop.onlinepetshop.repositories;
 
-import com.onlinepetshop.onlinepetshop.models.Images;
+import com.onlinepetshop.onlinepetshop.models.Image;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ImageRepository extends JpaRepository<Images, Long> {
+public interface ImageRepository extends JpaRepository<Image, Long> {
 
 }

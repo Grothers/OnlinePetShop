@@ -37,7 +37,7 @@ public class Product {
     @OneToMany(cascade = CascadeType.ALL,
             fetch = FetchType.LAZY, mappedBy = "product")
 
-    private List <Images> imagesList = new ArrayList<>();
+    private List <Image> imagesList = new ArrayList<>();
 
     private Long previewImageId;
 
@@ -45,5 +45,9 @@ public class Product {
 
     private void init(){
         createdTime = LocalDateTime.now();
+    }
+    public void addImageToProduct(Image image){
+        image.setProduct(this);
+        imagesList.add(image);
     }
 }

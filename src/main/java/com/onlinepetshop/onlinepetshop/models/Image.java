@@ -6,11 +6,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "images")
+@Table(name = "image")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Images {
+public class Image {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,8 +18,8 @@ public class Images {
     private Long id;
     @Column(name = "name")
     private String name;
-    @Column(name = "fileName")
-    private String fileName;
+    @Column(name = "OriginalFileName")
+    private String OriginalFileName;
     @Column(name = "size")
     private Long size;
     @Column(name = "contentType")
